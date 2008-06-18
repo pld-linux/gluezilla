@@ -2,13 +2,13 @@
 Summary:	Library to embed Gecko for the Mono Winforms WebControl
 Summary(pl.UTF-8):	Biblioteka osadzająca Gecko dla klasy Mono Winforms WebControl
 Name:		gluezilla
-Version:	1.2.6
+Version:	1.9.1
 Release:	0.1
 License:	LGPL v2
 Group:		Libraries
-#Source0Download: http://go-mono.com/sources-stable/
-Source0:	http://go-mono.com/sources/gluezilla/%{name}-%{version}.tar.bz2
-# Source0-md5:	7f84f7514c6f19e1cc0c22558c98c2c2
+# latest downloads summary at http://ftp.novell.com/pub/mono/sources-stable/
+Source0:	http://ftp.novell.com/pub/mono/sources/gluezilla/%{name}-%{version}.tar.bz2
+# Source0-md5:	c9d143cd531ff978da8e6b417e0d65d2
 URL:		http://www.mono-project.com/
 BuildRequires:	gtk+2-devel >= 1:2.0
 BuildRequires:	libstdc++-devel
@@ -47,7 +47,7 @@ for d in dom embed_base necko pipboot pipnss pref shistory uriloader webbrwsr wi
 done
 %{__make} \
 	AM_CXXFLAGS="$flags" \
-	AM_LDFLAGS="-L../../xulrunner-1.8.1.11/mozilla/dist/sdk/lib"
+	AM_LDFLAGS="-L../../xulrunner-1.8.1.14/mozilla/dist/sdk/lib"
 
 %install
 rm -rf $RPM_BUILD_ROOT
