@@ -1,0 +1,11 @@
+--- gluezilla-2.6/configure.ac.orig	2009-09-25 18:03:05.000000000 +0200
++++ gluezilla-2.6/configure.ac	2010-09-26 09:05:23.548564006 +0200
+@@ -88,7 +88,7 @@
+ 	if test "x${oldxul}" != xyes ; then
+ 
+ 		AC_MSG_CHECKING(Mozilla XPCOM > 1.8)
+-		mozilla_xpcom_pcs="libxul-embedding-unstable"
++		mozilla_xpcom_pcs="libxul-embedding"
+ 		for pc in $mozilla_xpcom_pcs; do
+ 			if $PKG_CONFIG --exists $pc; then
+ 				AC_MSG_RESULT($pc)

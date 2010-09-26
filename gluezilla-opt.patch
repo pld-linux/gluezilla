@@ -1,0 +1,21 @@
+--- gluezilla-2.6/configure.ac.orig	2010-09-26 09:07:15.876564006 +0200
++++ gluezilla-2.6/configure.ac	2010-09-26 09:20:36.648559815 +0200
+@@ -142,15 +142,15 @@
+ 	user_set_cxxflags=yes
+ fi
+ 
+-#if test "$user_set_cxxflags" != yes; then
+-	autoconf_default_CXXFLAGS="$CXXFLAGS"
++autoconf_default_CXXFLAGS="$CXXFLAGS"
++if test "$user_set_cxxflags" != yes; then
+ 	CXXFLAGS=""
+ 	if test "x${optimize}" == xno ; then
+ 		autoconf_default_CXXFLAGS="-g3"
+ 	else
+ 		autoconf_default_CXXFLAGS="-g -O2"
+ 	fi
+-#fi
++fi
+ 
+ AC_SUBST(autoconf_default_CXXFLAGS)
+ 
